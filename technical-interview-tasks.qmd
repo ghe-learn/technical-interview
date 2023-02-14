@@ -9,7 +9,7 @@ editor_options:
 
 # Part 1
 
-## Task 1
+## Task 1 (max 5 Minutes)
 
 You are working on a paper about sanitation facilities and you are setting up a new directory structure for this project. 
 
