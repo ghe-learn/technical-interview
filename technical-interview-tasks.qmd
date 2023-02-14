@@ -35,6 +35,7 @@ When storing data in spreadsheets, it is recommended to store dates as YYYY-MM-D
 ## Task 1
 
 The collection of tidyverse R Packages is installed in your computing environment. 
+
 1. Run the R code chunk below to execute the code and load the R Packages
 
 ```{r}
@@ -45,7 +46,7 @@ library(tidyverse)
 
 ## Task 1
 
-The file at what-a-waste-city-level-data.csv contains a dataset on solid waste management from around the world. The dataset has 15 variables (columns) with one observation (row) for each city with reported data.
+The file at what-a-waste-city-level-data.csv contains a dataset on solid waste management from around the world. The data has 5 variables (columns) with one observation (row) for each city with reported data.
 
 The first five variables are:
 
@@ -55,9 +56,8 @@ The first five variables are:
 - The population of each city.
 - The municipal solid waste generation in tons per year
 
-The following ten variables contain data on percentages of waste treated at different waste treatment technologies. 
-
 1. Execute the R code in the R code chunk below
+
 2. Inspect the R code and describe verbally, line by line, what the code does
 
 ```{r}
@@ -124,9 +124,9 @@ Use the `waste_city` object and write R code to complete the following task:
 
 Write R code to solve the following tasks
 
-1. Read what-a-waste-country-level-data.csv and drop rows containing any NAs, assgining the result to a new tibble (dataframe) called waste_country
+1. Read what-a-waste-country-level-data.csv and remove rows containing any NAs, assigining the result to a new tibble (dataframe) called waste_country
 
-2. Read gdp-data.csv and assign to a tibble (dataframe called gdp)
+2. Read gdp-data.csv and assign to a tibble (dataframe) called gdp
 
 3. Use a left join to combine the waste_country and gdp tibbles using the ISO country code variable columns for matches
 
