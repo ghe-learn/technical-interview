@@ -26,6 +26,10 @@ You are working on a paper about sanitation facilities and you are setting up a 
 - code
 - text
 
+## Task 2
+
+When storing data in spreadsheets, it is recommended to store dates as YYYY-MM-DD. Why?
+
 # Part 2
 
 ## Task 1
