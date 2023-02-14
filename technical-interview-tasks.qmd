@@ -7,14 +7,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-```{r}
-
-library(WDI)
-library(countrycode)
-  
-```
-
-
 # Part 1
 
 ## Task 1
@@ -39,7 +31,6 @@ You are working on a paper about sanitation facilities and you are setting up a 
 ## Task 1
 
 The collection of tidyverse R Packages is installed in your computing environment. 
-
 1. Run the R code chunk below to execute the code and load the R Packages
 
 ```{r}
@@ -147,14 +138,27 @@ ggplot(waste_city, aes(x = income_id,
 
 ## Task 5
 
+Write R code to solve the following tasks
+
+1. Read what-a-waste-country-level-data.csv and drop rows containing any NAs, assgining the result to a new tibble (dataframe) called waste_country
+
+2. Read gdp-data.csv and assign to a tibble (dataframe called gdp)
+
+3. Use a left join to combine the waste_country and gdp tibbles using the ISO country code variable columns for matches
+
+4. Prepare a scatterplot for GDP and municipal solid waste generation.
+
+5. Describe how you could improve this plot.
+
+
 ```{r}
+
+waste_country <- read_csv("what-a-waste-country-level-data.csv") |> 
+  drop_na()
 
 gdp <- read_csv("gdp-data.csv")
 
-waste_country <- read_csv("what-a-waste-country-level-data.csv")
-
 waste_gdp_joined <- waste_country |> 
-  drop_na() |> 
   left_join(gdp)
 
 ggplot(waste_gdp_joined,
