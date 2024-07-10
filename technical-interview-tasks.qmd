@@ -1,6 +1,6 @@
 ---
 title: "Technical Interview"
-subtitle: "Scientific Assistant Data Science"
+subtitle: "Internship Data Science"
 format: html
 editor: source
 editor_options: 
