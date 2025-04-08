@@ -9,26 +9,26 @@ editor_options:
 
 # Part 1
 
-## Task 1 (max 5 Minutes)
+## Task 1
+
+When storing data in spreadsheets, it is recommended to store dates as YYYY-MM-DD. Why?
+
+## Task 2 (max 5 minutes)
 
 You are working on a paper about sanitation facilities and you are setting up a new directory structure for this project. 
 
-1. Locate the "Files" manager in the RStudio IDE
+1. Locate the "Files" tab in the RStudio IDE where the files and directories of this project are displayed.
 
-2. Use the RStudio IDE graphical user interface (GUI) to create a new directory titled "sanitation-facilities"
+2. Use the RStudio IDE graphical user interface (GUI) to create a new directory titled "sanitation-facilities".
 
-3. Open the "sanitation-facilities" directory 
+3. Open the "sanitation-facilities" directory.
 
-4. Inside this directory, use the RStudio IDE GUI to create a directory structure that stores:
+4. Inside the "sanitation-facilities" directory, use the RStudio IDE GUI to create a directory structure that stores:
 
 - unprocessed raw data
 - processed data
 - code
 - text
-
-## Task 2
-
-When storing data in spreadsheets, it is recommended to store dates as YYYY-MM-DD. Why?
 
 # Part 2
 
@@ -36,7 +36,7 @@ When storing data in spreadsheets, it is recommended to store dates as YYYY-MM-D
 
 The collection of tidyverse R Packages is installed in your computing environment. 
 
-1. Run the R code chunk below to execute the code and load the R Packages
+1. Run the R code chunk below to execute the code and load the R Packages.
 
 ```{r}
 
@@ -44,7 +44,7 @@ library(tidyverse)
 
 ```
 
-## Task 1
+## Task 2
 
 The file at what-a-waste-city-level-data.csv contains a dataset on solid waste management from around the world. The data has 5 variables (columns) with one observation (row) for each city with reported data.
 
@@ -56,9 +56,9 @@ The first five variables are:
 - The population of each city.
 - The municipal solid waste generation in tons per year
 
-1. Execute the R code in the R code chunk below
+1. Execute the R code in the R code chunk below.
 
-2. Inspect the R code and describe verbally, line by line, what the code does
+2. Inspect the R code and describe verbally, line by line, what the code does.
 
 ```{r}
 
@@ -66,40 +66,31 @@ waste_city <- read_csv("what-a-waste-city-level-data.csv") |>
   mutate(income_id = factor(income_id, 
                             levels = c("HIC", "UMC", "LMC", "LIC")))
 
+```
+
+3. Execute the R code in the R code chunk below.
+
+4. Inspect the R code and describe verbally, line by line, what the code does.
+
+```{r}
 waste_city |> 
   group_by(income_id) |> 
   summarise(
     count = n()
   )
-
-```
-
-## Task 2
-
-Use the `waste_city` object and write R code to answer the following questions: 
-
-1. How many cities have reported data? 
-
-2. How many countries have reported data? 
-
-3. How many countries have reported data for five cities or more? 
-
-```{r}
-
-
-
 ```
 
 ## Task 3
 
-Use the `waste_city` object and write R code to complete the following task:
+Use the `waste_city` object and write R code to answer the following questions: 
 
-1. Add a new variable to the data, which contains the municipal solid waste_city generation for each city in kg per person per day.
+1. How many cities are represented in this dataset? 
 
-2. Assign the created data set to a new object titled `waste_city_day`
+2. How many countries are represented in this dataset? 
+
+3. How many countries have reported data for five cities or more? 
 
 ```{r}
-
 
 ```
 
@@ -109,14 +100,13 @@ Use the `waste_city` object and write R code to complete the following task:
 
 1. Prepare a box plot with income category on the x-axis and municipal solid waste generation in tons per year on the y-axis. 
 
-2. Describe the elements of the plot verbally
+2. Describe the elements of the boxplot verbally. What does the thick line represent? What does the box represent? What do the whiskers represent?
 
-3. Transform the y-axis to a base 10 logarithmic scale
+3. Transform the y-axis to a base 10 logarithmic scale.
 
-4. Rename the x- and y-axis labels
+4. Rename the x- axis to "Income Category" and the y-axis to "MSW Generation (tons/year)"
 
 ```{r}
-
 
 ```
 
